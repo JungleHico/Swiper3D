@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./Swiper3D.css" />
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+		}
+
+		.swiper3D-slide {
+			width: 400px;
+			height: 250px;
+		}
+		.card-1 {
+			background-color: #ddd;
+		}
+		.card-2 {
+			background-color: #bbb;
+		}
+		.card-3 {
+			background-color: #999;
+		}
+		.card-4 {
+			background-color: #777;
+			color: #fff;
+		}
+		.card-5 {
+			background-color: #555;
+			color: #fff;
+		}
+		.card-6 {
+			background-color: #333;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="swiper3D-container">
+		<div class="swiper3D-wrapper">
+			<div class="swiper3D-slide card-1">1</div>
+			<div class="swiper3D-slide card-2">2</div>
+			<div class="swiper3D-slide card-3">3</div>
+			<div class="swiper3D-slide card-4">4</div>
+			<div class="swiper3D-slide card-5">5</div>
+			<div class="swiper3D-slide card-6">6</div>
+		</div>
+		<div class="swiper3D-pagination"></div>
+		<div class="swiper3D-button swiper3D-button-prev"></div>
+		<div class="swiper3D-button swiper3D-button-next"></div>
+	</div>
+
+	<script src="./Swiper3D.js"></script>
+	<script>
+		var swiper3D = new Swiper3D(document.querySelector(".swiper3D-container"), {
+			autoplay: {
+				delay: 4000
+			},
+			pagination: {
+				el: ".swiper3D-pagination",
+				clickable: true
+			},
+			navigation: {
+				prevEl: ".swiper3D-button-prev",
+				nextEl: ".swiper3D-button-next"
+			}
+		});
+	</script>
+</body>
+</html>

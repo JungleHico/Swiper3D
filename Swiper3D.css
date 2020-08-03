@@ -1,0 +1,97 @@
+/* icon-font */
+@font-face {font-family: "swiper3D-icons";
+    src: url('data:application/font-woff;base64,d09GRgABAAAAAAQMAAsAAAAABmQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFY8zkhLY21hcAAAAYAAAABSAAABfn/76wFnbHlmAAAB1AAAAEcAAABMl2HsUmhlYWQAAAIcAAAALQAAADYZuWXAaGhlYQAAAkwAAAAcAAAAJAfeA4RobXR4AAACaAAAAAwAAAAMDAAAAGxvY2EAAAJ0AAAACAAAAAgAFAAmbWF4cAAAAnwAAAAfAAAAIAEOABJuYW1lAAACnAAAAUUAAAJtPlT+fXBvc3QAAAPkAAAAKAAAAEDhBeHIeJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2BkYWCcwMDKwMHUyXSGgYGhH0IzvmYwYuRgYGBiYGVmwAoC0lxTGByeRTyLZG7438AQw9zA0AAUZgTJAQDq+AyUeJztkLkNgEAMBMc+Q4Aog4CAYogQ179EG4cfymClGWlXjgxMQHMOx0AuhMjpq+TeWHI3tryx2J8+hvsOe7e0umb+rOn9axp/KupzBfoCtTMNYQAAeJxjYGQAAqZqpukMrAwMqpyM4uziTL7/XjKK6758mckoziiu9/IlSAlE3SmoOnVzdXNGxs1ANbqM4plAJXr/XjIAACCKEioAeJxjYGRgYADi7Ue/HYjnt/nKwM3CAAK3fSeKIdMsDEzTgRQHAxOIBwAzRgkoAAAAeJxjYGRgYG7438AQw8IAAkCSkQEVMAMARwkCbAQAAAAEAAAABAAAAAAAAAAAFAAmeJxjYGRgYGBmYGMA0QwMTEDMBYQMDP/BfAYACUgBIQB4nGWPTU7DMBCFX/oHpBKqqGCH5AViASj9EatuWFRq911036ZOmyqJI8et1ANwHo7ACTgC3IA78EgnmzaWx9+8eWNPANzgBx6O3y33kT1cMjtyDRe4F65TfxBukF+Em2jjVbhF/U3YxzOmwm10YXmD17hi9oR3YQ8dfAjXcI1P4Tr1L+EG+Vu4iTv8CrfQ8erCPuZeV7iNRy/2x1YvnF6p5UHFockikzm/gple75KFrdLqnGtbxCZTg6BfSVOdaVvdU+zXQ+ciFVmTqgmrOkmMyq3Z6tAFG+fyUa8XiR6EJuVYY/62xgKOcQWFJQ6MMUIYZIjK6Og7VWb0r7FDwl57Vj3N53RbFNT/c4UBAvTPXFO6stJ5Ok+BPV8bUnV0K27LnpQ0kV7NSRKyQl7WtlRC6gE2ZVeOEXpc0Yk/KGdI/wAJWm7IAAAAeJxjYGKAAC4G7ICZkYmRmZGFgTMzOT9PtyS1uIQLzjJkYAAAYwgHjA==') format('woff')
+}
+
+.swiper3D-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.swiper3D-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 1500px;
+}
+.swiper3D-slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center -900px;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+}
+.swiper3D-slide.active {
+    backface-visibility: hidden;
+}
+/* 分页器 */
+.swiper3D-pagination-bullets {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 30;
+}
+.swiper3D-pagination-bullet {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: #000;
+    opacity: 0.2;
+}
+.swiper3D-pagination-bullet-active {
+    opacity: 1;
+}
+.pagination-clickable .swiper3D-pagination-bullet {
+    cursor: pointer;
+}
+/* 前进后退按钮 */
+.swiper3D-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #aaa;
+    opacity: 0.5;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 30;
+}
+.swiper3D-button:hover,
+.swiper3D-button:active {
+    opacity: 0.7;
+}
+.swiper3D-button-prev {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.swiper3D-button-prev:before {
+    font-family: "swiper3D-icons" !important;
+    content: "\e658";
+}
+.swiper3D-button-next {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.swiper3D-button-next:before {
+    font-family: "swiper3D-icons" !important;
+    content: "\e659";
+}
